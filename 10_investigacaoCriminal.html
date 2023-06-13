@@ -11,8 +11,17 @@
     */
 
     //ENTRADA
-
+    alert (`Responda as perguntas com: S para sim e N para não.`);
+    const Telefonou = prompt(`Telefonou para a vítima?`).toLocaleLowerCase();
+    const Esteve = prompt(`Esteve no local do crime?`).toLocaleLowerCase();
+    const Mora = prompt (`Mora perto da vítima?`).toLocaleLowerCase();
+    const Devia = prompt(`Devia para a vítima?"`).toLocaleLowerCase();
+    const trabalhou = prompt(`Já trabalhou com a vítima?`).toLocaleLowerCase();
     //PROCESSAMENTO
+    let pontos = 0;
+    if (Telefonou == "S") {
+        pontos = pontos + 1;
+    }
 
     //SAÍDA
 
