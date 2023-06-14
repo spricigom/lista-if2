@@ -14,10 +14,33 @@
     */
 
     //ENTRADA
-
-
+    const AG = prompt(`Informe se irá usar álcool (A) ou gasolina (G)`).toUpperCase()
+    const litros = Number(prompt(`Informe quantos litros vai abastecer`));
     //PROCESSAMENTO
+    
+    let precoA = 6.10
+    let precoG = 6.50
+    if (AG == "A"){
+        if (litros <= 20){
+            precoA = precoA / 0.3;
+            alert (`Você pagará ${precoA.trim(2)}`);
+        }
 
+        if (litros > 20) {
+            precoA = precoA / 0.5;
+            alert (`Você pagará ${precoA.trim(2)}`);
+        }
+    }
+    else if (AG == "G") {
+        if (litros <= 20) {
+            precoG = precoG / 0.4;
+            alert (`Você pagará ${precoG.trim(2)}`);
+        }
+        if (litros > 20){
+            precoG = precoG / 0.6;
+            alert (`Você pagará ${precoG.trim(2)}`);
+        }
+    }
     
     //SAÍDA
 

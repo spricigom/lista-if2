@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     //PROBLEMA
     Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
     - "Telefonou para a vítima?"
@@ -11,18 +11,39 @@
     */
 
     //ENTRADA
-    alert (`Responda as perguntas com: S para sim e N para não.`);
-    const Telefonou = prompt(`Telefonou para a vítima?`).toLocaleLowerCase();
-    const Esteve = prompt(`Esteve no local do crime?`).toLocaleLowerCase();
-    const Mora = prompt (`Mora perto da vítima?`).toLocaleLowerCase();
-    const Devia = prompt(`Devia para a vítima?"`).toLocaleLowerCase();
-    const trabalhou = prompt(`Já trabalhou com a vítima?`).toLocaleLowerCase();
+    alert(`Responda as perguntas com: S para sim e N para não.`);
+    const Telefonou = prompt(`Telefonou para a vítima?`).toUpperCase();
+    const Esteve = prompt(`Esteve no local do crime?`).toUpperCase();
+    const Mora = prompt(`Mora perto da vítima?`).toUpperCase();
+    const Devia = prompt(`Devia para a vítima?"`).toUpperCase();
+    const trabalhou = prompt(`Já trabalhou com a vítima?`).toUpperCase();
     //PROCESSAMENTO
+
     let pontos = 0;
     if (Telefonou == "S") {
         pontos = pontos + 1;
     }
-
+    if (Esteve == "S") {
+        pontos = pontos + 1;
+    }
+    if (Mora == "S") {
+        pontos = pontos + 1;
+    }
+    if (Devia == "S") {
+        pontos = pontos + 1;
+    }
+    if (trabalhou == "S") {
+        pontos = pontos + 1;
+    }
     //SAÍDA
-
+    if (pontos == 2) {
+        alert(`Você é suspeita`);
+    } else if (pontos >= 3 || pontos <= 4) {
+        alert(`Você é cúmplice`);
+    } else if (pontos == 5) {
+        alert(`Você é assasino`);
+    } else {
+        alert(`Você é inocente`);
+    }
+    //SAÍDA
 </script>
